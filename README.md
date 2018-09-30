@@ -8,3 +8,7 @@ Includes:
 - html-webpack-plugin
 - SASS-loader
 - separate configs for DEV/PROD
+-----------------------------------------------------------------------------------
+- @babel/preset-react
+- eslint
+- react/react-dom/prop-types
