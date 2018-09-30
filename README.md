@@ -1,4 +1,4 @@
-# Boileplates
+# Boilerplates
 Standart boilerplate for Webpack configs.
 Includes: 
 - webpack
