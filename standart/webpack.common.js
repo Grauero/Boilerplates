@@ -12,13 +12,6 @@ module.exports = {
   },
   module: {
     rules: [
-      /*{
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ]
-      },*/
       {
         test: /\.scss$/,
         use: [
@@ -51,8 +44,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-proposal-class-properties','@babel/plugin-transform-runtime'],
+            presets: [
+              '@babel/preset-env'
+            ],
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
+              '@babel/plugin-transform-runtime'
+            ],
             compact: true,
             cacheDirectory: true,
           }
@@ -62,8 +60,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      title: 'title'
-    }),
+      new HtmlWebpackPlugin({
+        title: 'title'
+      }),
   ],
 };
