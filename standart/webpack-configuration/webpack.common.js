@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, '..', 'dist'),
   },
   module: {
     rules: [
@@ -60,8 +60,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
         title: 'title'
-      }),
+    }),
   ],
 };
