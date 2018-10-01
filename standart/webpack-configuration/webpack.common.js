@@ -36,7 +36,13 @@ module.exports = {
         test: /\.(png|jpg|jpeg)$/,
         use:  [
           'file-loader',
-        ]
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+            },
+          },
+        ],
       },
       {
         test: /\.m?js$/,
