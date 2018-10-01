@@ -1,5 +1,5 @@
 # Boilerplates
-Standart boilerplate for Webpack configs.
+Standart boilerplate for React applications configs.
 Includes: 
 - webpack
 - webpack-dev-server + Hot Module Replacement
