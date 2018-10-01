@@ -10,8 +10,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js"
+    "build": "webpack --config webpack-configuration/webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack-configuration/webpack.dev.js"
   },
   "keywords": [],
   "author": "",
