@@ -43,7 +43,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.m?js$/,
+        test: /\.m?(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -55,6 +55,7 @@ module.exports = {
             plugins: [
               '@babel/plugin-proposal-class-properties',
               '@babel/plugin-transform-runtime',
+              'react-hot-loader/babel',
             ],
             compact: true,
             cacheDirectory: true,
