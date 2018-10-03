@@ -14,6 +14,7 @@ Includes:
 - @babel/preset-react
 - eslint
 - react/react-dom/prop-types
+- hot module replacement for React components
 -----------------------------------------------------------------------------------
 Webpack configs for dev/prod placed in a 'webpack-configuration/' folder. 
 
