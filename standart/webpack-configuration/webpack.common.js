@@ -58,6 +58,7 @@ module.exports = {
             ],
             compact: true,
             cacheDirectory: true,
+            modules: false,
           }
         }
       }
