@@ -48,17 +48,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-            ],
-            plugins: [
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-transform-runtime',
-              'react-hot-loader/babel',
-            ],
             compact: true,
             cacheDirectory: true,
+            modules: false,
           },
         },
       },
