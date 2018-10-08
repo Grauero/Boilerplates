@@ -50,7 +50,6 @@ module.exports = {
           options: {
             compact: true,
             cacheDirectory: true,
-            modules: false,
           },
         },
       },

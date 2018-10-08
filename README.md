@@ -15,6 +15,7 @@ Includes:
 - eslint
 - react/react-dom/prop-types
 - hot module replacement for React components
+- jest
 -----------------------------------------------------------------------------------
 Webpack configs for dev/prod placed in a 'webpack-configuration/' folder. 
 
@@ -26,3 +27,4 @@ Initial files:
 Scripts:
 - 'npm run build' for build production version of app
 - 'npm run start' for start dev-server
+- 'npm run test' for start testing
