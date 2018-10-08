@@ -15,7 +15,7 @@ Includes:
 - eslint
 - react/react-dom/prop-types
 - hot module replacement for React components
-- jest
+- jest + enzyme
 -----------------------------------------------------------------------------------
 Webpack configs for dev/prod placed in a 'webpack-configuration/' folder. 
 
