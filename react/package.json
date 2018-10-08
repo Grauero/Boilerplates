@@ -18,7 +18,8 @@
   "scripts": {
     "build": "webpack --config webpack-configuration/webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack-configuration/webpack.dev.js",
-    "test": "set NODE_ENV=test && jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +37,8 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "css-loader": "^1.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
