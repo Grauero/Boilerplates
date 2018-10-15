@@ -1,8 +1,8 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
-module.exports = {  
+module.exports = {
   entry: {
     index: './src/index.js',
   },
@@ -13,32 +13,40 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader',
+            options: {
+              sourceMap: true,
+              convertToAbsoluteUrls: true,
+              hmr: true,
+            },
           },
           {
-            loader: "css-loader", 
+            loader: 'css-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+              convertToAbsoluteUrls: true,
+              hmr: true,
+            },
           },
           {
-            loader: "sass-loader",
+            loader: 'postcss-loader',
             options: {
-              sourceMap: true
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(png|jpg|jpeg)$/,
-        use:  [
+              plugins: [
+                autoprefixer({
+                  browsers: ['last 2 versions'],
+                }),
+              ],
+            },
+          },
           {
-            loader: 'url-loader',
+            loader: 'sass-loader',
             options: {
-              limit: 5000,
+              sourceMap: true,
+              convertToAbsoluteUrls: true,
+              hmr: true,
             },
           },
         ],
@@ -49,25 +57,27 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              '@babel/preset-env'
-            ],
-            plugins: [
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-transform-runtime'
-            ],
             compact: true,
             cacheDirectory: true,
-            modules: false,
-          }
-        }
-      }
-    ]
+          },
+        },
+      },
+      {
+        test: /\.(png|jpg|jpeg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-        title: 'title'
+      template: './src/index.html',
     }),
   ],
 };
