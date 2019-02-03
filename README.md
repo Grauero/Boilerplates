@@ -21,3 +21,4 @@ Scripts:
 
 - 'npm run build' for build production version of app
 - 'npm run start' for start dev-server
+
