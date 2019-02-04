@@ -19,17 +19,13 @@ module.exports = {
           {
             loader: 'style-loader',
             options: {
-              sourceMap: true,
-              convertToAbsoluteUrls: true,
-              hmr: true
+              sourceMap: true
             }
           },
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
-              convertToAbsoluteUrls: true,
-              hmr: true
+              sourceMap: true
             }
           },
           {
@@ -45,9 +41,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
-              convertToAbsoluteUrls: true,
-              hmr: true
+              sourceMap: true
             }
           }
         ]

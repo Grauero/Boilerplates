@@ -16,9 +16,7 @@ module.exports = merge(common, {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: false,
-              convertToAbsoluteUrls: true,
-              hmr: false
+              sourceMap: false
             }
           },
           {
@@ -34,9 +32,7 @@ module.exports = merge(common, {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: false,
-              convertToAbsoluteUrls: true,
-              hmr: false
+              sourceMap: false
             }
           }
         ]
