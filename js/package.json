@@ -1,9 +1,9 @@
 {
-  "name": "js-template",
+  "name": "javascript-template",
   "version": "1.0.0",
-  "description": "Basic template for JS apps, includes HMR, Babel, CSS modules",
+  "description": "Basic template for JavaScript apps, includes HMR, Babel, CSS modules",
   "keywords": [
-    "JS, Webpack, Babel, HMR"
+    "JavaScript, Webpack, Babel, HMR"
   ],
   "author": "Grauero",
   "homepage": "https://github.com/Grauero/Webpack-boilerplates",
