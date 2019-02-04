@@ -1,7 +1,13 @@
 {
   "name": "react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic template for React apps, includes HMR, Babel, CSS modules, tests with Jest/Enzyme",
+  "keywords": [
+    "React, Webpack, Jest, Babel, HMR"
+  ],
+  "author": "Grauero",
+  "homepage": "https://github.com/Grauero/Webpack-boilerplates",
+  "license": "ISC",
   "private": true,
   "sideEffects": [
     "*.scss",
@@ -10,72 +16,58 @@
     "*.jpg",
     "*.jpeg"
   ],
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "testEnvironment": "node",
-    "testMatch": [
-      "<rootDir>/src/__tests__/*.{js,jsx,mjs}"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ]
-  },
   "scripts": {
     "build": "webpack --config webpack-configuration/webpack.prod.js",
-    "start": "webpack-dev-server --open --config webpack-configuration/webpack.dev.js",
-    "test": "jest -i",
-    "test:watch": "jest -i --watch",
+    "dev": "webpack-dev-server --open --config webpack-configuration/webpack.dev.js",
+    "test": "jest --watch --no-cache",
+    "test-clear-cache": "jest --clearCache",
     "test:coverage": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.1.2",
-    "autoprefixer": "^9.2.0",
+    "@babel/runtime": "^7.3.1",
+    "autoprefixer": "^9.4.7",
+    "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "css-loader": "^1.0.0",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
-    "eslint": "^5.7.0",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^1.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^23.6.0",
-    "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.9.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.0.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
-    "react-hot-loader": "^4.3.11",
+    "react-hot-loader": "^4.6.5",
     "regenerator-runtime": "^0.12.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "terser": "^3.14.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9",
-    "webpack-merge": "^4.1.4"
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1"
   }
 }
